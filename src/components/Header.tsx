@@ -6,7 +6,7 @@ const Base = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  backgroundcolor: #fff;
+  background-color: #fff;
   text-align: center;
   box-shadow: rgb(0, 0, 0 / 0%) 0px 1px 0px 0px;
   width: 100%;
@@ -79,10 +79,8 @@ const SearchContainer = styled.div`
 
 const SearchFormWrapper = styled.div``;
 
-const SearchForm = styled.form``;
-
-const SearchLabel = styled.label`
-  backgroundcolor: rgb(245, 245, 247);
+const SearchForm = styled.form`
+  background-color: rgb(245, 245, 247);
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -90,6 +88,11 @@ const SearchLabel = styled.label`
   height: 38px;
   border-radius: 2px;
   padding: 7px 8px;
+`;
+
+const SearchLabel = styled.label`
+  display: flex;
+  align-items: center;
 `;
 
 const SearchInput = styled.input`
@@ -103,6 +106,9 @@ const SearchInput = styled.input`
   text-overflow: ellipsis;
   caret-color: rgb(53, 53, 53);
   line-height: 23px;
+  &: focus {
+    outline: none;
+  }
 `;
 
 const SignIn = styled.button`
@@ -139,8 +145,7 @@ const Header: React.FC = () => {
             <Menu>
               <Link href="/">
                 <TextLogo>
-                  <span className="primary">WATCHA</span>
-                  <span>by Jade</span>
+                  <span className="primary">Watcha</span>
                 </TextLogo>
               </Link>
             </Menu>
@@ -157,10 +162,10 @@ const Header: React.FC = () => {
                 <SearchFormWrapper>
                   <SearchForm>
                     <SearchLabel>
-                        <AiOutlineSearch/>
+                      <AiOutlineSearch />
                     </SearchLabel>
                     <SearchInput
-                      placeholder="Search by contents, name, or collection"
+                      placeholder="Search by contents, actors, or collections"
                       onChange={keywordHandler}
                     />
                   </SearchForm>
