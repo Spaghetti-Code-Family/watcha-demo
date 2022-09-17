@@ -2,7 +2,7 @@ import axiosInstance from './index';
 
 export const latestApi = () => axiosInstance.get('/movie/latest');
 
-export const nowplayingApi = () => axiosInstance.get('movie/now_playing');
+export const nowPlayingApi = () => axiosInstance.get('movie/now_playing');
 
 export const popularApi = () => axiosInstance.get('/movie/popular');
 

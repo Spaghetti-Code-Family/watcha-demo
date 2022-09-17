@@ -150,10 +150,10 @@ const Header: React.FC = () => {
               </Link>
             </Menu>
             <Menu>
-              <Link href="javascript:void(0)">
+              <Link href="/">
                 <MenuButton>Movie</MenuButton>
               </Link>
-              <Link href="javascript:void(0)">
+              <Link href="/">
                 <MenuButton>TV Program</MenuButton>
               </Link>
             </Menu>
