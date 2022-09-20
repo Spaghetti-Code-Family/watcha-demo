@@ -4,11 +4,20 @@ import useNowPlayingMovie from './useNowPlayingMovie';
 import Card from '../../../components/Card';
 import Slider from '../../../components/Slider';
 
-const Base = styled.div``;
+const Base = styled.div`
+  margin-bottom: 42px;
+  width: 100%;
+  max-width: 100vw;
+`;
 
-const Title = styled.h4``;
+const Title = styled.h4`
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 12px 0 14px;
+`;
 
-const NowPlayingSection: React.FC = () => {
+const NowPlayingMovieSection: React.FC = () => {
   const { data, isLoading } = useNowPlayingMovie();
 
   const getYear = (date: string) => date.split('-')[0];
@@ -35,4 +44,4 @@ const NowPlayingSection: React.FC = () => {
   );
 };
 
-export default NowPlayingSection;
+export default NowPlayingMovieSection;

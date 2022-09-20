@@ -4,11 +4,18 @@ import usePopularMovie from './usePopularMovie';
 import Card from '../../../components/Card';
 import Slider from '../../../components/Slider';
 
-const Base = styled.div``;
+const Base = styled.div`
+  margin-bottom: 42px;
+`;
 
-const Title = styled.h4``;
+const Title = styled.h4`
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 12px 0 14px;
+`;
 
-const PopularSection: React.FC = () => {
+const PopularMovieSection: React.FC = () => {
   const { data, isLoading } = usePopularMovie();
 
   const getYear = (date: string) => date.split('-')[0];
@@ -35,4 +42,4 @@ const PopularSection: React.FC = () => {
   );
 };
 
-export default PopularSection;
+export default PopularMovieSection;

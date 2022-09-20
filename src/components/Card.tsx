@@ -29,7 +29,7 @@ const Image = styled.img`
 `;
 
 const Info = styled.div`
-  text-align: center;
+  text-align: left;
   width: 100%;
 `;
 
@@ -38,7 +38,7 @@ const Title = styled.h4`
   font-size: 16px;
   font-weight: 500;
   overflow: hidden;
-  text-overflow: ellipssis;
+  text-overflow: ellipsis;
   line-height: 22px;
   margin-bottom: 3px;
   white-space: nowrap;
@@ -84,13 +84,16 @@ const Card: React.FC<Props> = ({
           <Image src={posterPath} alt={`${title}'s poster`} />
         </ImageWrapper>
         <Info>
-            <Title>{title}</Title>
-            <Keyword>{year}</Keyword>
-            <Average>
-                <span>Average</span>
-                <span>&nbsp;<AiFillStar/></span>
-                <span>{voteAverage}</span>
-            </Average>
+          <Title>{title}</Title>
+          <Keyword>{year}</Keyword>
+          <Average>
+            <span>Average</span>
+            <span>
+              &nbsp;
+              <AiFillStar />
+            </span>
+            <span>{voteAverage}</span>
+          </Average>
         </Info>
       </Base>
     </StyledLink>
